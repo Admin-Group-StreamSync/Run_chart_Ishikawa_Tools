@@ -67,7 +67,22 @@ Run the following command in the root of your repository:
 gh issue list --state all --limit 10000 --json createdAt > IshikawaTools/issues.json
 ```
 
-This command retrieves all issues and stores their creation timestamps in the JSON file used by the Python script.
+---
+
+> [!WARNING]
+> 🔴 **Important**
+>
+> The folder containing `runchart_prova.py` **must be named `IshikawaTools`** for the workflow to work correctly.
+>
+> If you change the folder name, you **must also update the command used to generate `issues.json`**.
+>
+> Example:
+>
+> ```bash
+> gh issue list --state all --limit 10000 --json createdAt > <your-folder>/issues.json
+> ```
+>
+> Replace `<your-folder>` with the folder where `runchart_prova.py` is located.
 
 ---
 
@@ -92,6 +107,7 @@ Example structure:
 # 📊 Generated Output
 
 The action generates a chart showing **issues created per week**.
+
 
 This helps track **repository activity trends over time**.
 
